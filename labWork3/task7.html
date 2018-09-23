@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>Lab Work 3</title>
+	</head>
+	<body>
+		<h1> Exercise 7 </h1>
+		<script>
+			var num = 9928;
+			var digits = num.toString().split('');
+			var realDigits = digits.map(Number);
+			var result = "";
+			for(var i=realDigits.length-1; i>=0; i--){
+				result += realDigits[i];
+			}
+			document.writeln(num);
+			document.writeln("<br>" + result);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Lab Work 3</title>
+	</head>
+	<body>
+		<h1> Exercise 6 </h1>
+		<script>
+			function checkHappy(num){
+				var bool=true;
+				while(bool){
+					var digits = num.toString().split('');
+					var realDigits = digits.map(Number);
+					var result = 0;
+					for (var i=0; i<realDigits.length; i++){
+						result = result + realDigits[i]*realDigits[i];
+					}
+					num = result;
+					if (num == 1) {
+						return true;
+					}
+					else if(num == 58 || num == 4 || num == 37){
+						return false;
+					}
+				}
+			}
+			var input = 1;
+			document.writeln("HAPPY numbers are:");
+			while (input < 20){
+				if (checkHappy(input)){
+					document.writeln(input);	
+				}
+				input++;
+			}
+		</script>
+	</body>
+</html>

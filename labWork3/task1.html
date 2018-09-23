@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Lab Work 3</title>
+	</head>
+	<body>
+		<h1>Exercise 1</h1>
+		<script>
+			var today = new Date();
+			var h = today.getHours();
+			var minu = today.getMinutes();
+			var sec = today.getSeconds();
+			var day = today.getDay();
+			if (minu < 10){
+				minu = '0' + minu;
+			}
+			if (sec < 10){
+				sec = '0' + sec;
+			}
+			
+			switch (day){
+				case 1: day = "Monday"; break;
+				case 2: day = "Tuesday"; break;
+				case 3: day = "Wednesday"; break;
+				case 4: day = "Thursday"; break;
+				case 5: day = "Friday"; break;
+				case 6: day = "Saturday"; break;
+				case 0: day = "Sunday"; break;
+			}
+			if (h > 11) {
+				h = h - 12;
+				h = h + " PM";
+			}
+			else {
+				h = h + " AM";
+			}
+			today = h + ":" + minu + ":" + sec;
+			document.write("Current day is : " + day);
+			document.write("<br>");
+			document.writeln("Current time is : " + today);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Lab Work 3</title>
+	</head>
+	<body>
+		<h1> Exercise 4 </h1>
+		<script>
+			var input = [];
+			for (var i=0; i<5; i++){
+				input[i]=prompt("Enter number " + (i+1));
+			}
+			var max = input[0];
+			for (var i=1; i<5; i++){
+				if (input[i-1] < input[i]){
+					max = input[i];
+				}
+			}
+			window.alert("Maximum number: " +max);
+		</script>
+	</body>
+</html>

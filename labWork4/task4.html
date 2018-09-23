@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Lab Work 4</title>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script>
+			var count=0,last=0;
+			$(document).ready(function(){
+				$(":button").click(function(event){
+					var timer=event.timeStamp;
+					if (count==0){
+						last=timer;
+						$("#log").text("Click again");
+						count++;
+					}
+					else{
+						last=timer-last;
+						alert(last);
+						count--;
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Heading1</h1>
+		<h2>Heading2</h2>
+		<p>Paragraph</p>
+		<button id="log">Click</button>
+	</body>
+</html>

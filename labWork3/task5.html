@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Lab Work 3</title>
+	</head>
+	<body>
+		<h1> Exercise 5 </h1>
+		<script>
+			function checkEven(num){
+				if (num%2==0) return true;
+				return false;
+			}
+			
+			var input = [];
+			for (var i=0; i<15; i++){
+				input[i]=prompt("Enter number " + (i+1));
+				if(checkEven(input[i])){
+					window.alert(input[i] + " is even");
+				}
+				else {
+					window.alert(input[i] + " is odd");
+				}
+			}
+		</script>
+	</body>
+</html>
